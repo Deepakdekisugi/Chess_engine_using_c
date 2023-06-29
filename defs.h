@@ -91,6 +91,8 @@ typedef struct {
 
 #define FR2SQ(f, r) ( (21 + (f) ) + ( (r) * 10) )
 #define SQ64(sq120) Sq120ToSq64[sq120]
+#define Pop(b) PopBit(b)
+#define CNT(b) CountBits(b)
 
 /*GLOBALS*/
 extern int Sq120ToSq64[BRD_SQ_NUM];
