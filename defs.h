@@ -105,5 +105,7 @@ extern void AllInit();
 /*----------------------------------------------------------------bitboaerds.c---------------------------------------------------------- */
 
 extern void PrintBitBoard(U64 bb);
+extern int PopBit(U64 *bb);
+extern int CountBits(U64 b);
 
 #endif
