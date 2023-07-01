@@ -1,3 +1,3 @@
-// init.c
+// hashkeys.c
 
 #include "defs.h"
