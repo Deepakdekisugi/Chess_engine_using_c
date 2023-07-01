@@ -5,6 +5,12 @@ int Sq64ToSq120[64];
 
 U64 SetMask[64];
 U64 ClearMask[64];
+
+U64 PieceKeys[13] [120];
+U64 SideKey;
+U64 CastleKey [16];
+
+
 void InitBitMasks() {
     int index = 0;
 
