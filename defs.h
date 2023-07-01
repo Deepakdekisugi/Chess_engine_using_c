@@ -17,6 +17,7 @@ printf("In File %s ", __FILE__); \
 printf("At Line %s ", __LINE__); \
 exit(1);}
 #endif
+
 typedef unsigned long long U64;
 
 
