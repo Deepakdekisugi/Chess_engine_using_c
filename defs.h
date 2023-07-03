@@ -91,7 +91,8 @@ typedef struct {
 /*MACROS*/
 
 #define FR2SQ(f, r) ( (21 + (f) ) + ( (r) * 10) )
-#define SQ64(sq120) Sq120ToSq64[sq120]
+#define SQ64(sq120) (Sq120ToSq64[(sq120)])
+#define SQ120(SQ64) (Sq64ToSq120[(sq64)])
 #define Pop(b) PopBit(b)
 #define CNT(b) CountBits(b)
 #define CLRBIT (bb, sq)  ( (bb) &= ClearMask[(sq)])
