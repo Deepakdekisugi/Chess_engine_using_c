@@ -4,6 +4,26 @@
 #include "stdio.h"
 #include "defs.h"
 
+int Parse_Fen(char *fen, S_BOARD *pos) {
+
+    ASSERT(fen! = NULL);  
+    ASSERT(pos! = NULL);
+
+    int rank = RANK_8;
+    int file = FILE_A;
+    int piece = 0;
+    int count = 0;
+    int i = 0;
+    int sq64 = 0;
+    int sq120 = 0;
+
+    ResetBoard(pos);  
+
+    while ((rank >= RANK_1) && *fen) {
+        count = 1;
+    }
+}
+
 void ResetBoard(S_BOARD *pos) {
 
     int index = 0;
