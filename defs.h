@@ -46,7 +46,7 @@ enum {
 
 enum { FALSE, TRUE};
 
-enum {WKCA = 1, WQCA = 2, BKCA = 4, BQCA = 8};
+enum {WKCA = 1, WQCA = 2, BKCA = 4, BQCA = 8}; //king and queen side castling
 
 typedef struct{
     int move;
@@ -56,7 +56,7 @@ typedef struct{
     U64 posKey;
 
 
-} S_UNDO;
+} S_UNDO; //for undo a move
 
 
 typedef struct {
@@ -77,12 +77,12 @@ typedef struct {
 
     U64 posKey;
 
-    int pceNum[13];
-    int bigPce[3];
-    int majPce[3];
-    int minPce[3];
+    int pceNum[13]; //all 13 pcs on the board
+    int bigPce[3]; //pieces other then pawn
+    int majPce[3]; //rook and queen
+    int minPce[3]; //bisop and knight
 
-    S_UNDO history[MAXGAMEMOVES];
+    S_UNDO history[MAXGAMEMOVES]; //undo for all the moves
 
     //piece list
 
@@ -114,11 +114,11 @@ extern U64 CastleKeys[16];
 /*FUNCTIONS*/
 
 
-/*----------------------------------------------------------------init.c---------------------------------------------------------- */
+/*init.c*/
 
 extern void AllInit();
 
-/*----------------------------------------------------------------bitboaerds.c---------------------------------------------------------- */
+/*bitboard.c*/
 
 extern void PrintBitBoard(U64 bb);
 extern int PopBit(U64 *bb);
