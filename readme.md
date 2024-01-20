@@ -1,59 +1,48 @@
-# Chess Engine in C
+```markdown
+# VICE Chess Engine
 
 ## Overview
 
-This is a simple chess engine implemented in the C programming language. The engine supports basic chess functionality, including legal move generation, position evaluation, and a simple search algorithm.
+VICE is a powerful open-source chess engine developed in the C programming language. It supports various chess functionalities, including XBoard and UCI protocols, move generation, position evaluation, and advanced search algorithms.
 
-## Features
+## Compilation
 
-- **Move Generation:** The engine can generate legal moves for a given position.
-- **Position Evaluation:** Basic evaluation of a chess position is implemented, assigning values to pieces and evaluating the overall position.
-- **Search Algorithm:** A simple search algorithm (minimax with alpha-beta pruning) is used to find the best move for a given position.
+To compile the VICE Chess Engine, use the provided Makefile with the following command:
 
-## Getting Started
+```bash
+make
+```
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/Deepakdekisugi/chess-engine-c.git
-   cd chess-engine-c
-   ```
-
-2. **Compile the Code:**
-   ```bash
-   gcc -o chess_engine main.c chess.c
-   ```
-
-3. **Run the Chess Engine:**
-   ```bash
-   ./chess_engine
-   ```
+This will invoke the GCC compiler with the necessary source files and optimization flags, generating the executable named `vice`.
 
 ## Usage
 
-- **Input:**
-  - The user can input moves in standard algebraic notation (e.g., e2e4, Ng1f3).
-  - To exit the program, enter "quit" or use the keyboard shortcut Ctrl+C.
+Run the compiled `vice` executable to start the chess engine. The engine supports both XBoard and UCI protocols for communication with graphical chess interfaces.
 
-- **Output:**
-  - The engine will display the updated board after each move.
-  - The best move according to the search algorithm will be shown.
+```bash
+./vice
+```
 
-## Code Structure
+The engine will await commands from the interface and provide responses, allowing users to play games, analyze positions, and more.
 
-- **`main.c`:** Entry point for the program. Handles user input and game loop.
-- **`chess.c`:** Contains the core chess engine implementation, including move generation, position evaluation, and the search algorithm.
-- **`chess.h`:** Header file declaring function prototypes and data structures.
+## Features
 
-## Future Improvements
+- **XBoard and UCI Support:** VICE Chess Engine supports both XBoard and UCI protocols for compatibility with various chess interfaces.
+- **Advanced Search Algorithms:** The engine employs sophisticated search algorithms to find the best move in a given position.
+- **Position Evaluation:** VICE evaluates chess positions using a comprehensive evaluation function.
+- **Polyglot Opening Book:** The engine utilizes a polyglot opening book for enhanced opening play.
 
-- Implement more advanced search algorithms (e.g., iterative deepening, transposition tables).
-- Add support for additional chess features (e.g., castling, en passant, promotions).
-- Improve the evaluation function for more accurate position assessment.
+## File Structure
+
+- `xboard.c`: Handles XBoard protocol communication.
+- `vice.c`: Main file containing the entry point for the chess engine.
+- `uci.c`: Implements the Universal Chess Interface (UCI) communication.
+- ... (and other source files)
 
 ## Contributing
 
-Contributions are welcome! Feel free to fork the repository and submit pull requests to enhance the chess engine.
+Contributions to VICE Chess Engine are welcome! If you'd like to contribute, fork the repository, make your changes, and submit a pull request.
 
 ## License
 
-This chess engine is open-source and distributed under the [MIT License](LICENSE). Feel free to use and modify the code for your own projects.
+VICE Chess Engine is open-source and distributed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code.
