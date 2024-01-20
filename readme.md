@@ -14,7 +14,7 @@ This is a simple chess engine implemented in the C programming language. The eng
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/chess-engine-c.git
+   git clone https://github.com/Deepakdekisugi/chess-engine-c.git
    cd chess-engine-c
    ```
 
